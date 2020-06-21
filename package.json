@@ -1,0 +1,17 @@
+{
+  "name": "staruml-extra-fonts",
+  "title": "Extra Fonts",
+  "description": "Extra fonts for StarUML",
+  "homepage": "https://github.com/marcelohmariano/staruml-extra-fonts",
+  "version": "1.0.0",
+  "keywords": ["extra", "fonts"],
+  "author": {
+    "name": "Marcelo Mariano",
+    "email": "marcelo.hs.mariano@gmail.com",
+    "url": "https://github.com/marcelohmariano"
+  },
+  "license": "MIT",
+  "engines": {
+    "staruml": ">=3.0.0"
+  }
+}
