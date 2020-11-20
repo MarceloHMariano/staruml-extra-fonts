@@ -20,12 +20,29 @@ function fontDirs() {
   return dirs
 }
 
+function addFontsToStyleEditor() {
+  const $fontSelect = app.styleEditor.$view.find('label.font-face > select')
+  const fonts = Object.keys(app.fontManager.fonts).sort().map(font => font)
+
+  for (font of fonts) {
+    const $fontOption = `option[value='${font}']`
+    if ($fontSelect.find($fontOption).length > 0)
+      continue
+
+    const fontOptionHtml = `<option value='${font}'>${font}</option>`
+    $fontSelect.append(fontOptionHtml)
+    console.log(fontOptionHtml)
+  }
+}
+
 function loadFonts() {
   const dirs = fontDirs()
 
   for (const dir of dirs) {
     app.fontManager.loadFont(dir)
   }
+
+  addFontsToStyleEditor()
 }
 
 function init() {
